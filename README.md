@@ -1,2 +1,25 @@
 # go-ai-monitoring
-Go-based monitoring service
+
+Overview
+
+Go microservice collects metrics.
+
+AI service (Python) detects anomalies.
+
+Deployed on Kubernetes, provisioned with Terraform.
+
+Monitored with Prometheus + Grafana.
+
+Architecture - Go service → AI service → DB → Grafana.
+
+Tech Stack
+
+Backend: Go (Gin/Chi/GRPC)
+
+AI: Python (FastAPI + scikit-learn IsolationForest)
+
+Infra: Terraform, AWS (EKS, RDS)
+
+CI/CD: GitHub Actions
+
+Monitoring: Prometheus, Grafana
