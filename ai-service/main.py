@@ -17,4 +17,4 @@ model = AnomalyModel()
 def predict(metrics: Metrics):
     data = [[metrics.cpu, metrics.memory, metrics.disk]]
     result = model.predict(data)
-    return {"anomaly": bool(result[0])}
+    return {"prediction": bool(result[0])}
