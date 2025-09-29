@@ -4,7 +4,7 @@ Overview
 
 Go microservice collects metrics :-
 AI service (Python + FastAPI + IsolationForest)
-Go service (metrics collector + inference client)
++ Go service (metrics collector + inference client)
 
 AI service (Python) detects anomalies.
 
