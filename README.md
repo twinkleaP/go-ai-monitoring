@@ -2,7 +2,7 @@
 
 Overview
 
-Go microservice collects metrics.
+Go microservice collects metrics :-
 
 AI service (Python) detects anomalies.
 
