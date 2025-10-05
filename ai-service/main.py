@@ -1,8 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.model import AnomalyModel
+from model import AnomalyModel
+#from app.model import AnomalyModel
+import numpy as np
+from sklearn.ensemble import IsolationForest
 
-app = FastAPI(title="AI Anomaly Detection Service")
+
+
+app = FastAPI()
 
 # Request schema
 class Metrics(BaseModel):
@@ -12,6 +17,10 @@ class Metrics(BaseModel):
 
 # Load model
 model = AnomalyModel()
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.post("/predict")
 def predict(metrics: Metrics):

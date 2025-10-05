@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  ai-service:
+    build:
+      context: ./ai-service
+      dockerfile: Dockerfile.ai
+    container_name: ai-service
+    ports:
+      - "8000:8000"
+    healthcheck:
+      #disable: true
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  go-service:
+    build:
+      context: ./go-service
+      dockerfile: Dockerfile
+    container_name: go-service
+    depends_on:
+      ai-service:
+        condition: service_healthy
+
+     
