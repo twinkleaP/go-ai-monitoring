@@ -1,0 +1,66 @@
+# === OS & Editor files ===
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === Go build artifacts ===
+bin/
+build/
+*.out
+*.exe
+*.test
+*.log
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+.venv/
+venv/
+*.egg-info/
+*.egg
+*.pickle
+
+# === Docker ===
+*.tar
+*.img
+*.iso
+*.qcow2
+*.vdi
+*.vmdk
+*.log
+
+# === Node / JS (if you add a frontend) ===
+node_modules/
+dist/
+build/
+
+# === Environment / Secrets ===
+.env
+.env.*
+*.key
+*.pem
+
+# === Data / Models / Datasets ===
+data/
+datasets/
+models/
+*.h5
+*.pkl
+*.csv
+*.json
+*.zip
+*.gz
+*.tar
+*.bz2
+__pycache__/
+
+# === Misc ===
+coverage/
+tmp/
+logs/
