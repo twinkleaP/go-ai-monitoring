@@ -64,3 +64,4 @@ __pycache__/
 coverage/
 tmp/
 logs/
+Docker.dmg
